@@ -32,153 +32,30 @@
   </div>
 </header>
 
-<div class="w3-card w3-container w3-avocado">
 
-<div class="w3-row-padding w3-center w3-margin-top" w3-blue>
-<div class="w3-third">
-  <div class="w3-card w3-container w3-dark-avocado" style="min-height:460px">
-  <h3>Why Recycle?</h3><br>
-  <i style="font-size:120px"> <img src="http://www.clker.com/cliparts/k/4/H/G/h/w/recycle-icon-hi.png" height="150" ></i>
-  <p>Save the environment</p>
-  <p>Keep Washington County clean</p>
-  <p>Reduce landfill space</p>
-  <p>Feel good about it!</p>
-  </div>
+ <div class="container">
+  <form action="action_page.php">
+
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+
+  </form>
 </div>
-
-<div class="w3-third">
-  <div class="w3-card w3-container w3-dark-avocado" style="min-height:460px">
-  <h3>Who Are We?</h3><br>
-  <i style="font-size:120px"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/GWC_logo_2016_.png/800px-GWC_logo_2016_.png" width="150" ></i>
-  <p>Girls Who Code</p>
-  <p>High Schoolers</p>
-  <p>Washington County Residents</p>
-  <p>This is our annual project for our club that we worked together to create </p>
-  </div>
-</div>
-
-<div class="w3-third">
-  <div class="w3-card w3-container w3-dark-avocado" style="min-height:460px">
-  <h3>Design</h3><br>
-  <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-  <p>Paper like design</p>
-  <p>Bold colors and shadows</p>
-  <p>Equal across platforms</p>
-  <p>Equal across devices</p>
-  </div>
-</div>
-</div>
-
-
-<hr>
-<div class="w3-center">
-  <h2>See what people are doing in Washington County!</h2>
-</div>
-<br>
-
-<div class="w3-row w3-border">
-  <div class="w3-half w3-container w3-blue w3-border">
-    <h5>Look at this child!</h5>  
-    <p>He has a recylcing bin full of things that need to be recycled.</p>
-	<p>It's an avocado world</p>
-  </div>
-  <div class="w3-half w3-container">
-    <img src="https://thumb7.shutterstock.com/display_pic_with_logo/286756/286756,1314224627,1/stock-photo-children-recycling-plastic-bottles-83416114.jpg" height = "205">
-  </div>
-</div>
-<br>
-</div>
-
-<div class="w3-card w3-container w3-dark-avocado">
-<div class="w3-center w3-dark-avocado">
-  <h2>Get started recycling today!</h2>
-</div>   
-
-
-<!-- Footer -->
-<footer class="w3-container w3-dark-avocado w3-padding-16">
-  <h3>Sherwood High School Girls Who Code 2017</h3>
-  
-  <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
-    <span class="w3-text w3-theme-light w3-padding">Go To Top</span>    
-    <a class="w3-text-white" href="#myHeader"><span class="w3-xlarge">
-    <i class="fa fa-chevron-circle-up"></i></span></a>
-  </div>
-  
-</footer>
-</div>   
-
-
-
-<!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
-<script>
-// Side navigation
-function w3_open() {
-    var x = document.getElementById("mySidebar");
-    x.style.width = "100%";
-    x.style.fontSize = "40px";
-    x.style.paddingTop = "10%";
-    x.style.display = "block";
-}
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-}
-// Tabs
-function openCity(evt, cityName) {
-  var i;
-  var x = document.getElementsByClassName("city");
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  var activebtn = document.getElementsByClassName("testbtn");
-  for (i = 0; i < x.length; i++) {
-      activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " w3-dark-grey";
-}
-var mybtn = document.getElementsByClassName("testbtn")[0];
-mybtn.click();
-// Accordions
-function myAccFunc(id) {
-    var x = document.getElementById(id);
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else { 
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-// Slideshows
-var slideIndex = 1;
-function plusDivs(n) {
-slideIndex = slideIndex + n;
-showDivs(slideIndex);
-}
-function showDivs(n) {
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length} ;
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
-showDivs(1);
-// Progress Bars
-function move() {
-  var elem = document.getElementById("myBar");   
-  var width = 5;
-  var id = setInterval(frame, 10);
-  function frame() {
-    if (width == 100) {
-      clearInterval(id);
-    } else {
-      width++; 
-      elem.style.width = width + '%'; 
-      elem.innerHTML = width * 1  + '%';
-    }
-  }
-}
 </script>
 
 </body>
